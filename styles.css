@@ -1,19 +1,19 @@
 /* manrope-regular - latin */
 @font-face {
   font-display: swap;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/manrope-v15-latin-regular.woff2') format('woff2');
+  src: url("../fonts/manrope-v15-latin-regular.woff2") format("woff2");
 }
 
 /* manrope-800 - latin */
 @font-face {
   font-display: swap;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 800;
-  src: url('../fonts/manrope-v15-latin-800.woff2') format('woff2');
+  src: url("../fonts/manrope-v15-latin-800.woff2") format("woff2");
 }
 
 /* CSS RESET — Josh Comeau */
@@ -67,8 +67,8 @@ h6 {
   --clr-white: hsl(0, 0%, 100%);
 
   /* font family */
-  --ff-headings: 'Manrope', sans-serif;
-  --ff-body: 'Manrope', sans-serif;
+  --ff-headings: "Manrope", sans-serif;
+  --ff-body: "Manrope", sans-serif;
 
   /* font weights */
   --fw-500: 400;
