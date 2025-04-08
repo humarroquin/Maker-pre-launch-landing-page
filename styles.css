@@ -1,0 +1,132 @@
+/* font files */
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/manrope-v15-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/manrope-v15-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./fonts/manrope-v15-latin-800.woff2") format("woff2");
+}
+
+/* CSS RESET — Josh Comeau */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* VARIABLES */
+:root {
+  /* colors */
+  --clr-turquoise: hsl(179, 80%, 58%);
+  --clr-blue: hsl(206, 84%, 22%);
+  --clr-saturated-blue: hsl(225, 14%, 53%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(230, 60%, 8%);
+  --red: hsl(343, 100%, 58%);
+
+  /* font family */
+  --ff-headings: "Manrope", "Segoe UI", sans-serif;
+  --ff-body: "Manrope", "Segoe UI", sans-serif;
+
+  /* font weights */
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-extra-bold: 800;
+
+  /* fixed font sizes */
+  --fs-18px: 1.125rem;
+  --fs-button: 1rem;
+
+  /* spacing */
+  --size-100: 1rem; /* 16px */
+  --size-200: 1.5rem; /* 24px */
+  --size-300: 2rem; /* 32px */
+  --size-400: 2.25rem; /* 36px */
+  --size-500: 3rem; /* 48px */
+  --size-600: 6rem; /* 96px */
+  --size-700: 9.375rem; /* 150px */
+}
+
+/* Utility classes */
+/* 48px-32px */
+.heading-primary {
+  font-size: 2rem;
+  font-size: clamp(2rem, -0.24561403508771917rem + 4.678362573099415vw, 3rem);
+}
+
+/* 32px-24px */
+.heading-secondary {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 0.3771929824561404rem + 2.3391812865497075vw, 2rem);
+}
+
+.container {
+  --max-width: 69.375rem;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+/* PAGE STYLES */
+
+/* general styles */
+body {
+  /* css reset */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  /* css reset */
+
+  font-size: 1rem;
+}
