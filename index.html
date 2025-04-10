@@ -14,27 +14,35 @@
     <title>Frontend Mentor | Maker pre-launch landing page</title>
   </head>
   <body>
-    <header class="container">
-      <img src="/assets/logo.svg" alt="Maker" />
+    <header class="header | container">
+      <img src="./assets/logo.svg" alt="Maker" />
     </header>
     <main>
-      <section class="container">
-        <h1 class="heading-primary">
-          Get paid for the work you <span class="turquoise-text">love</span> to
-          do.
-        </h1>
-        <p>
-          The 9-5 grind is so last century. We believe in living life on your
-          own terms. Whether you’re looking to escape the rat race or set up a
-          side hustle, we’ve got you covered.
-        </p>
+      <section class="hero">
+        <div class="hero__wrapper container">
+          <div class="hero__image-wrapper">
+            <img src="./assets/illustration-hero-mobile.png" alt="" />
+          </div>
+          <div class="hero__content">
+            <h1 class="hero__heading heading-primary">
+              Get paid for the work you
+              <span class="turquoise-text">love</span> to do.
+            </h1>
+            <p class="hero__description">
+              The 9-5 grind is so last century. We believe in living life on
+              your own terms. Whether you’re looking to escape the rat race or
+              set up a side hustle, we’ve got you covered.
+            </p>
+            <img class="hero__icon" src="./assets/icon-scroll.svg" alt="" />
+          </div>
+        </div>
       </section>
-      <section class="container">
-        <h2>Why Maker?</h2>
-        <ul>
+      <section class="why-maker | container">
+        <h2 class="sr-only">Why Join Maker?</h2>
+        <ul class="grid-4cols">
           <li>
             <div class="icon-wrapper">
-              <img src="/assets/illustration-passions.svg" alt="" />
+              <img src="./assets/illustration-passions.svg" alt="" />
             </div>
             <h3>Indulge your passions</h3>
             <p>
@@ -44,7 +52,7 @@
           </li>
           <li>
             <div class="icon-wrapper">
-              <img src="/assets/illustration-financial-freedom.svg" alt="" />
+              <img src="./assets/illustration-financial-freedom.svg" alt="" />
             </div>
             <h3>Gain financial freedom</h3>
             <p>
@@ -54,7 +62,7 @@
           </li>
           <li>
             <div class="icon-wrapper">
-              <img src="/assets/illustration-lifestyle.svg" alt="" />
+              <img src="./assets/illustration-lifestyle.svg" alt="" />
             </div>
             <h3>Choose your lifestyle</h3>
             <p>
@@ -64,7 +72,7 @@
           </li>
           <li>
             <div class="icon-wrapper">
-              <img src="/assets/illustration-work-anywhere.svg" alt="" />
+              <img src="./assets/illustration-work-anywhere.svg" alt="" />
             </div>
             <h3>Work from anywhere</h3>
             <p>
@@ -80,7 +88,7 @@
           We only make money when our creators make money. Our plans are always
           affordable, and it’s completely free to get started.
         </p>
-        <ul>
+        <ul class="grid-2cols">
           <li>
             <!-- card 1 -->
             <small>Dip your toe</small>
