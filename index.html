@@ -10,6 +10,13 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Maker pre-launch landing page</title>
   </head>
@@ -26,7 +33,7 @@
           <div class="hero__content">
             <h1 class="hero__heading heading-primary">
               Get paid for the work you
-              <span class="turquoise-text">love</span> to do.
+              <span class="text-turquoise">love</span> to do.
             </h1>
             <p class="hero__description">
               The 9-5 grind is so last century. We believe in living life on
@@ -104,16 +111,18 @@
           We only make money when our creators make money. Our plans are always
           affordable, and it’s completely free to get started.
         </p>
-        <ul class="pricing__price-container | grid-2cols">
+        <ul class="pricing-card-container | grid-2cols">
           <!-- card 1 -->
           <li class="pricing-card pricing-card--free">
-            <small>Dip your toe</small>
-            <p>
+            <small class="pricing-tag">Dip your toe</small>
+            <p class="text-faded">
               Just getting started? No problem at all! Our free plan will take
               you a long way.
             </p>
-            <p>Free</p>
-            <ul>
+            <p class="price">Free</p>
+            <ul
+              class="pricing-card-features-list pricing-card-features-list--free"
+            >
               <li>Unlimited products</li>
               <li>Basic analytics</li>
               <li>Limited marketplace exposure</li>
@@ -122,13 +131,17 @@
           </li>
           <!-- card 2 -->
           <li class="pricing-card pricing-card--paid">
-            <small>Dive right in</small>
-            <p>
+            <small class="pricing-tag">Dive right in</small>
+            <p class="text-faded">
               Ready for the big time? Our paid plan will help you take your
               business to the next level.
             </p>
-            <p>$25.00 <span class="text-sm">/month</span></p>
-            <ul>
+            <p class="price price--paid">
+              $25.00 <span class="text-sm text-faded">/month</span>
+            </p>
+            <ul
+              class="pricing-card-features-list pricing-card-features-list--paid"
+            >
               <li>Custom domain</li>
               <li>Advanced analytics and reports</li>
               <li>High marketplace visibility</li>

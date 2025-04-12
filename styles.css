@@ -134,8 +134,15 @@ h6 {
   font-size: var(--fs-18px);
 }
 
-.turquoise-text {
+.text-turquoise {
   color: var(--clr-turquoise);
+}
+.text-faded {
+  opacity: 60%;
+}
+.text-sm {
+  font-size: 15px;
+  font-weight: var(--fw-regular);
 }
 
 .container {
@@ -337,19 +344,80 @@ ul {
   margin-bottom: 72px;
 }
 
+/* pricing cards */
+.pricing-card-container {
+  gap: 30px;
+  max-width: 920px;
+  margin-inline: auto;
+}
 .pricing-card {
   padding: 48px 37px;
   border-radius: 8px;
 }
 .pricing-card--free {
   background-color: var(--clr-blue);
-}
-.pricing-card--paid {
-  background-color: var(--clr-turquoise);
+  color: var(--clr-white);
+  transform: scale(0.95);
 }
 
-.pricing__price-container {
-  gap: 30px;
-  max-width: 920px;
-  margin-inline: auto;
+.pricing-card--paid {
+  background-color: var(--clr-turquoise);
+  color: var(--clr-blue);
+}
+.pricing-card--free,
+.pricing-card--paid {
+  position: relative;
+}
+.pricing-card--free::before,
+.pricing-card--paid::before {
+  content: "";
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.pricing-card--free::before {
+  background-image: url(/assets/icon-free.svg);
+  height: 4rem;
+  width: 4rem;
+  top: -1.5rem;
+  left: 3rem;
+}
+.pricing-card--paid::before {
+  background-image: url(/assets/icon-paid.svg);
+  background-size: contain;
+  height: 3.5rem;
+  width: 3.5rem;
+  top: -1.9rem;
+  left: 3rem;
+}
+.pricing-tag {
+  display: inline-block;
+  font-weight: var(--fw-extra-bold);
+  font-size: 18px;
+  margin-bottom: 19px;
+}
+.price {
+  font-weight: var(--fw-extra-bold);
+  font-size: 40px;
+  margin-block: 25px 19px;
+}
+.price--paid {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+}
+.pricing-card-features-list li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.pricing-card-features-list li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 12px;
+  margin-right: 8px;
+}
+.pricing-card-features-list--free li::before {
+  color: var(--clr-turquoise);
+}
+.pricing-card-features-list--paid li::before {
+  color: var(--clr-blue);
 }
