@@ -111,7 +111,7 @@
           We only make money when our creators make money. Our plans are always
           affordable, and it’s completely free to get started.
         </p>
-        <ul class="pricing-card-container | grid-2cols">
+        <ul class="pricing-card-container">
           <!-- card 1 -->
           <li class="pricing-card pricing-card--free">
             <small class="pricing-tag">Dip your toe</small>
@@ -150,18 +150,22 @@
           </li>
         </ul>
       </section>
-      <section class="container">
-        <h2>Get notified when we launch</h2>
-        <form action="">
+      <section class="cta | container">
+        <h2 class="cta__heading heading-secondary">
+          Get notified when we launch
+        </h2>
+        <form class="cta__form" action="">
           <div class="form-section">
-            <label for="email">Email</label>
+            <label class="sr-only" for="email">Email</label>
             <input
               type="email"
               id="email"
               name="email"
               placeholder="Email address"
             />
-            <button>Get notified</button>
+          </div>
+          <div class="form-section">
+            <button class="button">Get notified</button>
           </div>
         </form>
       </section>
