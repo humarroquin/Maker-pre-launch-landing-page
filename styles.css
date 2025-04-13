@@ -107,7 +107,11 @@ h6 {
     7.8112rem + 6.9388vw,
     12.625rem
   ); /* 202-151px */
-  --size-fluid-2: clamp(9rem, 7.1505rem + 7.8912vw, 12.625rem); /* 202-144px */
+  --size-fluid-2: clamp(
+    6.25rem,
+    2.9974rem + 13.8776vw,
+    12.625rem
+  ); /* 202-144px */
   --size-fluid-3: clamp(9rem, 8.7768rem + 0.9524vw, 9.4375rem); /* 151-144px */
 }
 
@@ -244,11 +248,14 @@ ul {
 
 .hero__wrapper {
   position: relative;
+  background-image: url(./assets/bg-hero-squiggle.svg);
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position: center top;
 }
 
 .hero::before,
-.hero::after,
-.hero__wrapper::before {
+.hero::after {
   content: "";
   background-size: contain;
   background-repeat: no-repeat;
@@ -265,15 +272,6 @@ ul {
 .hero::after {
   background-image: url(./assets/illustration-hero-right.svg);
   right: -6rem;
-}
-
-.hero__wrapper::before {
-  background-image: url(./assets/bg-hero-squiggle.svg);
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: var(--bg-img-squiggle);
-  height: var(--bg-img-squiggle);
 }
 
 .hero__heading,
@@ -295,9 +293,11 @@ ul {
     padding: 0;
     margin-bottom: var(--size-700);
   }
+  .hero__wrapper {
+    background-image: none;
+  }
   .hero::before,
-  .hero::after,
-  .hero__wrapper::before {
+  .hero::after {
     display: none;
   }
   .hero__image-wrapper {
@@ -308,7 +308,7 @@ ul {
 
 /* why */
 .why-maker {
-  margin-bottom: var(--size-fluid-2);
+  margin-bottom: var(--size-fluid-1);
 }
 
 .icon-wrapper {
@@ -367,7 +367,7 @@ ul {
 
 /* pricing */
 .pricing {
-  margin-bottom: var(--size-fluid-3);
+  margin-bottom: var(--size-fluid-2);
 }
 
 .pricing__heading {
@@ -533,5 +533,6 @@ ul {
   .cta {
     background-size: 100% 25%;
     background-position: 0 3rem;
+    margin-bottom: var(--size-400);
   }
 }
