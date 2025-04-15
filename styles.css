@@ -72,7 +72,8 @@ h6 {
   --clr-blue: hsl(206, 84%, 22%);
   --clr-dark-blue: hsl(230, 60%, 8%);
   --clr-turquoise: hsl(179, 80%, 58%);
-  --red: hsl(343, 100%, 58%);
+  --clr-red: hsl(343, 100%, 58%);
+  --clr-orange: hsl(25, 77%, 59%);
   --clr-white: hsl(0, 0%, 100%);
 
   /* font family */
@@ -152,7 +153,7 @@ h6 {
   ); /* 32px-24px */
 }
 .heading-tertiary {
-  font-size: var(--fs-18px);
+  font-size: var(--fs-18);
 }
 
 .text-turquoise {
@@ -351,7 +352,7 @@ ul {
     margin-top: 0;
   }
   .why-maker__reasons li:nth-child(odd) {
-    margin-left: 3.625rem;
+    margin-inline-start: 3.625rem;
   }
 }
 
@@ -361,7 +362,7 @@ ul {
     text-align: center;
   }
   .why-maker__reasons li:nth-child(odd) {
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 }
 
@@ -494,6 +495,10 @@ ul {
   flex-wrap: wrap;
 }
 
+.form-section--input {
+  position: relative;
+}
+
 .cta__form .button {
   border-width: var(--border-width);
   padding: var(--padding-block) var(--padding-inline);
@@ -505,19 +510,50 @@ ul {
   color: var(--clr-white);
   padding: var(--padding-block) var(--padding-inline);
   border-radius: 50rem;
-  min-width: 20rem;
+  min-width: 22rem;
   font-size: var(--fs-15px);
 }
 #email::placeholder {
   color: var(--clr-white);
 }
 
+#email:not(:placeholder-shown):valid {
+  outline: 2px solid var(--clr-turquoise);
+}
+#email:not(:placeholder-shown):invalid {
+  outline: 2px solid var(--clr-red);
+}
+#email:focus:invalid {
+  outline: 2px solid var(--clr-orange);
+}
+
+.cta__form:valid p {
+  display: none;
+}
+#email:focus:invalid ~ .error-message p {
+  display: none;
+}
+#email:not(:placeholder-shown):invalid:not(:focus) ~ .error-message p {
+  display: block;
+}
+
+.error-message {
+  font-size: var(--fs-15);
+  height: 1rem;
+  position: absolute;
+  top: 4rem;
+  left: 1rem;
+}
+.error-message p {
+  color: var(--clr-red);
+  display: none;
+}
+
 @media (max-width: 43.75em) {
   .form-section {
-    width: 100%;
-
     display: flex;
     justify-content: center;
+    width: 100%;
   }
   #email {
     min-width: initial;
@@ -534,5 +570,11 @@ ul {
     background-size: 100% 25%;
     background-position: 0 3rem;
     margin-bottom: var(--size-400);
+  }
+  .error-message {
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
 }
