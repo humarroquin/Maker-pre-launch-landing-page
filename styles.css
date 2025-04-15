@@ -423,14 +423,14 @@ ul {
   position: absolute;
 }
 .pricing-card--free::before {
-  background-image: url(/assets/icon-free.svg);
+  background-image: url(./assets/icon-free.svg);
   height: 4rem;
   width: 4rem;
   top: -1.5rem;
   left: 3rem;
 }
 .pricing-card--paid::before {
-  background-image: url(/assets/icon-paid.svg);
+  background-image: url(./assets/icon-paid.svg);
   background-size: contain;
   height: 3.5rem;
   width: 3.5rem;
@@ -474,7 +474,7 @@ ul {
 .cta {
   margin-bottom: var(--size-650);
 
-  background-image: url(/assets/bg-footer-squiggle.svg);
+  background-image: url(./assets/bg-footer-squiggle.svg);
   background-repeat: no-repeat;
   background-size: 100% 80%;
   padding-block: 5rem;
